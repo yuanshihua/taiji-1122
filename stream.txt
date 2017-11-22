@@ -1,0 +1,48 @@
+1,为什么需要stream
+	Stream 作为 Java 8 的一大亮点，它与 java.io 包里的 InputStream 和 OutputStream 是完全不同的概念。
+	Java 8 中的 Stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、高效的聚合操作（aggregate operation），或者大批量数据操作 (bulk data operation)。
+	Stream API 借助于同样新出现的 Lambda 表达式，极大的提高编程效率和程序可读性。
+	总而言之，就是适合用于大数据操作，以及分布式开发
+2，stream特性
+	Stream不存储数据、不修改数据
+	充分利用Lambda
+	不能按照索引找数据
+	如arr[3]
+	容易将结果转换为array, list之类的
+	Lazy
+	Parallelizable
+3，构建stream
+	someList.stream()
+	Stream.of(arrayObjects)  // 不含primitives   
+	Arrays.stream(someArry)
+	Stream.of(val1, val2, …)
+	Stream.generate, Stream.iterate
+	Files.lines(somePath)
+	streamBuilder.build()
+	String.chars, Stream.of(someString.split(…))
+	From another stream: map, distinct, filter, sorted, limit, skip
+4，收集stream处理的结果
+	List
+		someStream.collect(Collectors.toList())
+	Array
+		someStream.toArray(EntryType[]::new)
+	只能在plipe line的最后调用
+		someStream.map(…).filter(…).map(…).skip(…).limit(…).collect(…)
+5，stream相关的方法
+	forEach(Consumer)
+	map(function)
+	filter(Predicate)
+	findFirst()
+	Optional
+	Optional.of(someVal)
+	Optional.empty()
+	Optional.get()
+	Optional.orElse(defaultVal)
+	findAny()
+	Limit, skip
+	sorted, min, max, distinct
+	allMath, anMatch, nonMatch, count
+	
+		
+
+	
