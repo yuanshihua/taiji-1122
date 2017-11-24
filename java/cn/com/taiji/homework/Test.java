@@ -9,7 +9,7 @@ public class Test {
 	public static void main(String[] args) {
 		List<Student> listStu = new ArrayList<>();
 		for (int i = 0; i < 50; i++) {
-			Student student = new Student(i+1,"stu"+i+1,5*(int)(Math.random()*8)+60);
+			Student student = new Student(i+1,"stu"+i+1,5*(int)(Math.random()*8+1)+60);
 			listStu.add(student);
 		}
 		
